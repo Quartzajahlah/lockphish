@@ -4,7 +4,7 @@ banner() {
 function print_centered {
      [[ $# == 0 ]] && return 1
 
-     declare -i TERM_COLS="$(tput cols)"
+     declare -i TERM_COLS="$(input cols)"
      declare -i str_len="${#1}"
      [[ $str_len -ge $TERM_COLS ]] && {
           echo "$1";
